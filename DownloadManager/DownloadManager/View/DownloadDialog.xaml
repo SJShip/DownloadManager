@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DownloadManager"
         mc:Ignorable="d"
-        Title="Downloading..." Height="Auto" Width="400" SizeToContent="Height" ResizeMode="NoResize">
+        Title="Downloading..." Height="Auto" Width="400" SizeToContent="Height" ResizeMode="NoResize"
+		  Loaded="OnLoaded">
 	<Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="Auto" />
@@ -17,7 +18,7 @@
 		<ProgressBar Margin="5,15,5,5" Height="20" Minimum="0" Maximum="100" Value="0" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
 		<Expander Margin="5" Padding="5" Header="Details" Grid.Column="0" Grid.Row="1"  BorderBrush="LightBlue" BorderThickness="1">
 			<ScrollViewer MaxHeight="300" VerticalScrollBarVisibility="Auto">
-				<StackPanel>
+				<StackPanel Name="TaskPanel">
 
 				</StackPanel>
 			</ScrollViewer>

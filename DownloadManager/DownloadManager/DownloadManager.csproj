@@ -64,11 +64,11 @@
     <Compile Include="Data\TaskResult.cs" />
     <Compile Include="Data\TaskStatus.cs" />
     <Compile Include="Services\IDownloadService.cs" />
-    <Page Include="Controls\TaskTracker.xaml">
+    <Page Include="View\TaskTracker.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\DownloadDialog.xaml">
+    <Page Include="View\DownloadDialog.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -76,10 +76,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controls\TaskTracker.xaml.cs">
+    <Compile Include="ViewModel\TaskTrackerViewModel.cs" />
+    <Compile Include="View\TaskTracker.xaml.cs">
       <DependentUpon>TaskTracker.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\DownloadDialog.xaml.cs">
+    <Compile Include="View\DownloadDialog.xaml.cs">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -112,5 +113,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Img\error.png" />
+    <Resource Include="Img\OK.png" />
+    <Resource Include="Img\rotator.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DownloadManager.Controls;
+using DownloadManager.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,26 @@ namespace DownloadManager
 		public DownloadDialog()
 		{
 			InitializeComponent();
+		}
+
+		protected override void OnInitialized(EventArgs e)
+		{
+			base.OnInitialized(e);
+			Tasks = TaskGenerator.ReadTasks();
+		}
+
+		public List<Data.Task> Tasks { get; set; }
+
+		private void OnLoaded(object sender, RoutedEventArgs e) {
+			if (Tasks != null)
+			{
+				foreach (var task in Tasks)
+				{
+
+					var taskTracker = new TaskTracker();
+					this.TaskPanel.Children.Add(taskTracker);
+				}
+			}
 		}
 	}
 }

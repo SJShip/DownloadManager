@@ -5,13 +5,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DownloadManager.Controls"
              mc:Ignorable="d" 
-             d:DesignHeight="25" d:DesignWidth="400">
+             d:DesignHeight="32" d:DesignWidth="400">
 	<DockPanel>
 		<DockPanel.ToolTip>
 			<Label Content="{Binding Tooltip}"></Label>
 		</DockPanel.ToolTip>
 		<Border BorderThickness="1"></Border>
-		<Image Width="25" Height="25" Source="{Binding ImageSource}"></Image>
-		<Label Width="Auto" Content="{Binding Title}"></Label> 
+		<Image Width="32" Height="32" Source="{Binding ImageSource}"></Image>
+		<Label Width="Auto" Margin="3 0 3 0" Content="{Binding Title}" VerticalAlignment="Center"></Label>
 	</DockPanel>
 </UserControl>
